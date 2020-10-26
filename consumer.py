@@ -2,7 +2,6 @@ from kafka import KafkaConsumer
 from json import loads
 from concurrent.futures import ThreadPoolExecutor, as_completed, thread
 from concurrent.futures._base import TimeoutError
-import itertools as it
 
 CONSUMERS_QUANTITY = 3
 
