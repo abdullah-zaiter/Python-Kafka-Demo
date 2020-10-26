@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed, thread
 from concurrent.futures._base import TimeoutError
 
 CONSUMERS_QUANTITY = 3
-
+TOPIC_NAME = "topic_test3"
 running = True
 
 def consumerVisualizer(consumer, id): 
@@ -13,7 +13,7 @@ def consumerVisualizer(consumer, id):
 
 if __name__ == "__main__":
     consumers = [KafkaConsumer(
-        'topic_test',
+        TOPIC_NAME,
         bootstrap_servers=['localhost:9092'],
         auto_offset_reset='earliest',
         group_id=f"group",
